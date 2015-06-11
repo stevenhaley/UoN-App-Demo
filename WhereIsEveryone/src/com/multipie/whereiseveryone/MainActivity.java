@@ -120,11 +120,3 @@ public class MainActivity extends Activity implements OnConnectionFailedListener
 		userPosition.setPosition(new LatLng(location.getLatitude(), location.getLongitude()));
 	}
 }
-
-/*Server.getAllPeople(new Callback<List<Person>>() { public void success(List<Person> people, Response response) {
- * map.clear(); for (Person person : people) { map.addMarker(new MarkerOptions().title(person.getName()).position(
- * new LatLng(person.getLatitude(), person.getLongitude()))); } }
- * 
- * 
- * public void failure(RetrofitError error) { Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
- * } }); */
