@@ -1,6 +1,7 @@
 package com.multipie.whereiseveryone;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
@@ -62,20 +63,25 @@ public class MainActivity extends Activity implements OnConnectionFailedListener
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
-		if (id == R.id.menu_new_person) {
+		switch (id) {
+		case R.id.menu_new_person:
 			NameDialog dialog = new NameDialog();
 			dialog.show(getFragmentManager(), dialog.getClass().getName());
 			return true;
-
-		} else if (id == R.id.menu_send_position_to_server) {
+		case R.id.menu_send_position_to_server:
 			sendLocationToServer();
 			return true;
 
-		} else if (id == R.id.menu_get_positions_from_server) {
+		case R.id.menu_get_positions_from_server:
 			refreshServerLocations();
 			return true;
 
-		} else {
+		case R.id.menu_new_activity:
+			Intent intent = new Intent(this, SecondActivity.class);
+			startActivity(intent);
+			return true;
+
+		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}

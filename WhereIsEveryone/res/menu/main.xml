@@ -16,7 +16,11 @@
 		android:id="@+id/menu_get_positions_from_server"
 		android:orderInCategory="102"
 		android:showAsAction="never"
-		android:title="Get Locs from Server">
-	</item>
+		android:title="Get Locs from Server"/>
+	<item
+		android:id="@+id/menu_new_activity"
+		android:orderInCategory="103"
+		android:showAsAction="never"
+		android:title="New Activity"/>
 
 </menu>
