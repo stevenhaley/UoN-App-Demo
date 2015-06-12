@@ -1,15 +1,20 @@
 package com.multipie.whereiseveryone;
 
 public class Person {
-	@SuppressWarnings("unused")
 	private long id;
 	private String name;
+	private String bio;
 	private String latitude;
 	private String longitude;
 
 
 	private Person() {
 		// Keep GSON happy
+	}
+
+
+	public long getId() {
+		return id;
 	}
 
 
@@ -30,5 +35,15 @@ public class Person {
 
 	public double getLongitude() {
 		return Double.parseDouble(longitude);
+	}
+
+
+	public String getBio() {
+		return bio;
+	}
+
+
+	public void setBio(String bio) {
+		this.bio = bio;
 	}
 }
